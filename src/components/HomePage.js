@@ -34,8 +34,8 @@ export default class HomePage extends React.Component{
   handleClick() {
     console.log("Success!")
 
-    console.log('https://ec2-18-191-0-180.us-east-2.compute.amazonaws.com:8080/team208/login?userId='+this.state.userID+'&password='+this.state.password)
-    axios.get('https://ec2-18-191-0-180.us-east-2.compute.amazonaws.com:8080/team208/login?userId='+this.state.userID+'&password='+this.state.password)
+    console.log('http://ec2-18-191-0-180.us-east-2.compute.amazonaws.com:8080/team208/login?userId='+this.state.userID+'&password='+this.state.password)
+    axios.get('http://ec2-18-191-0-180.us-east-2.compute.amazonaws.com:8080/team208/login?userId='+this.state.userID+'&password='+this.state.password)
     .then(response => this.setState({
       username: response.data.name,
       adminlogin: response.data.name === 'admin' ? true : false,
